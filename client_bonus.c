@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   client_bonus.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hbouqssi <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: hbouqssi <hbouqssi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 17:55:24 by hbouqssi          #+#    #+#             */
-/*   Updated: 2022/02/06 17:55:26 by hbouqssi         ###   ########.fr       */
+/*   Updated: 2022/03/26 20:00:26 by hbouqssi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,11 @@ int	main(int argc, char **argv)
 	{
 		write(1, "Client:" RED "INVALID ARGUMENT !\n", 34);
 		exit(EXIT_FAILURE);
+	}
+	if (pid <= 1)
+	{
+		write(1, "INVALID ARGUMENT !\n", 34);
+		exit(1);
 	}
 	signal (SIGUSR1, handler);
 	pid = ft_atoi(argv[1]);
