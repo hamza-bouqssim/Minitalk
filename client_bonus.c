@@ -6,18 +6,12 @@
 /*   By: hbouqssi <hbouqssi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 17:55:24 by hbouqssi          #+#    #+#             */
-/*   Updated: 2022/03/26 20:00:26 by hbouqssi         ###   ########.fr       */
+/*   Updated: 2022/03/26 20:02:52 by hbouqssi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
-// int check_pid(int pid, char *str)
-// {
-// 	if (pid == -1 || pid == 0 || strlen(str) < 5)
-// 		return 0;
-// 	else
-// 		return 1;
-// }
+
 void	send_message(int pid, const char *str)
 {
 	int	i;
